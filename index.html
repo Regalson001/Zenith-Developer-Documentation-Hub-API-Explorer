@@ -1,0 +1,524 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zenith developer documentation hub and interactive API explorer.">
+    <title>Zenith Docs | Developer Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP NAVIGATION -->
+    <header class="topbar">
+        <a href="#home" class="brand">
+            <span class="brand-icon">Z</span>
+            <span>zenith<span class="brand-light">.docs</span></span>
+        </a>
+
+        <nav class="top-links" aria-label="Main navigation">
+            <a href="#getting-started">Documentation</a>
+            <a href="#api-reference">API Reference</a>
+            <a href="#examples">Examples</a>
+            <a href="#resources">Resources</a>
+        </nav>
+
+        <a href="#api-reference" class="top-button">Explore API ↗</a>
+    </header>
+
+    <div class="layout" id="home">
+
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-heading">DOCUMENTATION</div>
+
+            <a href="#getting-started" class="side-link active">
+                <span>⌂</span> Overview
+            </a>
+
+            <details open>
+                <summary>Getting Started</summary>
+                <div class="nested-links">
+                    <a href="#introduction">Introduction</a>
+                    <a href="#installation">Installation</a>
+                    <a href="#authentication">Authentication</a>
+                </div>
+            </details>
+
+            <details>
+                <summary>Core Concepts</summary>
+                <div class="nested-links">
+                    <a href="#requests">API Requests</a>
+                    <a href="#responses">API Responses</a>
+                    <a href="#errors">Error Handling</a>
+                </div>
+            </details>
+
+            <details open>
+                <summary>API Reference</summary>
+                <div class="nested-links">
+                    <a href="#api-reference">Endpoints</a>
+                    <a href="#users">Users</a>
+                    <a href="#authentication">Authorization</a>
+                </div>
+            </details>
+
+            <details>
+                <summary>Advanced Guides</summary>
+                <div class="nested-links">
+                    <a href="#examples">Code Examples</a>
+                    <a href="#security">Security</a>
+                    <a href="#best-practices">Best Practices</a>
+                </div>
+            </details>
+
+            <div class="sidebar-bottom">
+                <div class="help-card">
+                    <span class="help-icon">✦</span>
+                    <strong>Need help?</strong>
+                    <p>Explore our developer resources and guides.</p>
+                    <a href="#resources">View resources →</a>
+                </div>
+                <p class="version">ZENITH DOCS v1.0.0</p>
+            </div>
+        </aside>
+
+        <!-- MAIN DOCUMENTATION -->
+        <main class="content">
+
+            <div class="breadcrumb">
+                Documentation <span>/</span> Getting Started
+            </div>
+
+            <section id="getting-started" class="hero">
+                <div class="eyebrow">
+                    <span class="status-dot"></span>
+                    DEVELOPER DOCUMENTATION
+                </div>
+
+                <h1>Build better.<br><span>Ship faster.</span></h1>
+
+                <p class="hero-description">
+                    Everything you need to integrate with Zenith.
+                    Explore our APIs, discover practical examples,
+                    and build powerful applications with confidence.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#introduction" class="primary-button">
+                        Get started →
+                    </a>
+                    <a href="#api-reference" class="secondary-button">
+                        API Reference
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <strong>99.9%</strong>
+                        <span>API Uptime</span>
+                    </div>
+                    <div>
+                        <strong>REST</strong>
+                        <span>API Architecture</span>
+                    </div>
+                    <div>
+                        <strong>v1.0</strong>
+                        <span>Latest Version</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INTRODUCTION -->
+            <section class="doc-section" id="introduction">
+                <div class="section-label">01 — OVERVIEW</div>
+                <h2>Introduction to Zenith</h2>
+
+                <p>
+                    Zenith is a developer-focused API platform designed
+                    to simplify application integration and data exchange.
+                    This documentation provides a clear starting point
+                    for developers building modern digital experiences.
+                </p>
+
+                <div class="info-box">
+                    <span>ⓘ</span>
+                    <div>
+                        <strong>Before you begin</strong>
+                        <p>
+                            You should have basic knowledge of HTTP,
+                            REST APIs, JSON, and web development.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INSTALLATION -->
+            <section class="doc-section" id="installation">
+                <div class="section-label">02 — SETUP</div>
+                <h2>Installation</h2>
+
+                <p>
+                    Start by preparing your development environment.
+                    The following example demonstrates a typical
+                    project installation workflow.
+                </p>
+
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="window-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span>Installation example</span>
+                        <span class="language-tag">TERMINAL</span>
+                    </div>
+
+                    <div class="code-body">
+                        <pre><code><span class="code-comment"># Create your project</span>
+mkdir zenith-project
+
+<span class="code-comment"># Enter project directory</span>
+cd zenith-project
+
+<span class="code-comment"># Initialize your project</span>
+npm init -y
+
+<span class="code-comment"># Install dependencies</span>
+npm install</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AUTHENTICATION -->
+            <section class="doc-section" id="authentication">
+                <div class="section-label">03 — SECURITY</div>
+                <h2>Authentication</h2>
+
+                <p>
+                    API authentication helps protect your application
+                    and ensures that only authorised requests access
+                    protected resources.
+                </p>
+
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="window-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span>Request headers</span>
+                        <span class="language-tag">HTTP</span>
+                    </div>
+
+                    <div class="code-body">
+                        <pre><code>Authorization: Bearer YOUR_API_TOKEN
+Content-Type: application/json
+Accept: application/json</code></pre>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <strong>Security reminder</strong>
+                    <p>Never expose private API keys in public repositories or client-side code.</p>
+                </div>
+            </section>
+
+            <!-- CODE EXPLORER -->
+            <section class="doc-section" id="examples">
+                <div class="section-label">04 — CODE EXPLORER</div>
+                <h2>Interactive code examples</h2>
+
+                <p>
+                    Switch between different programming examples
+                    to explore how an API request can be implemented.
+                </p>
+
+                <div class="code-window explorer">
+
+                    <input type="radio" name="code-tab" id="tab-html" checked>
+                    <input type="radio" name="code-tab" id="tab-css">
+                    <input type="radio" name="code-tab" id="tab-curl">
+
+                    <div class="code-tabs">
+                        <label for="tab-html">HTML</label>
+                        <label for="tab-css">CSS</label>
+                        <label for="tab-curl">cURL</label>
+                    </div>
+
+                    <div class="tab-content html-content">
+                        <div class="code-header">
+                            <span>index.html</span>
+                            <span class="language-tag">HTML</span>
+                        </div>
+                        <pre><code>&lt;button class="api-button"&gt;
+    Send API Request
+&lt;/button&gt;
+
+&lt;section class="response"&gt;
+    &lt;h2&gt;API Response&lt;/h2&gt;
+    &lt;p&gt;Request completed successfully.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+                    </div>
+
+                    <div class="tab-content css-content">
+                        <div class="code-header">
+                            <span>style.css</span>
+                            <span class="language-tag">CSS</span>
+                        </div>
+                        <pre><code>.api-button {
+    background: #635bff;
+    color: white;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.api-button:hover {
+    background: #483ee8;
+}</code></pre>
+                    </div>
+
+                    <div class="tab-content curl-content">
+                        <div class="code-header">
+                            <span>request.sh</span>
+                            <span class="language-tag">CURL</span>
+                        </div>
+                        <pre><code>curl -X GET \
+  https://api.example.com/v1/users \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Accept: application/json"</code></pre>
+                    </div>
+
+                    <div class="code-footer">
+                        <span>● Example code</span>
+                        <span>Switch tabs to view code</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- API REFERENCE -->
+            <section class="doc-section" id="api-reference">
+                <div class="section-label">05 — API REFERENCE</div>
+                <h2>API Endpoints</h2>
+
+                <p>
+                    Explore the available endpoints and their
+                    corresponding HTTP methods.
+                </p>
+
+                <div class="endpoint-list">
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <code>/api/v1/users</code>
+                        <span class="endpoint-description">Retrieve all users</span>
+                    </div>
+
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <code>/api/v1/users/{id}</code>
+                        <span class="endpoint-description">Retrieve a single user</span>
+                    </div>
+
+                    <div class="endpoint">
+                        <span class="method post">POST</span>
+                        <code>/api/v1/users</code>
+                        <span class="endpoint-description">Create a new user</span>
+                    </div>
+
+                    <div class="endpoint">
+                        <span class="method put">PUT</span>
+                        <code>/api/v1/users/{id}</code>
+                        <span class="endpoint-description">Update user information</span>
+                    </div>
+
+                    <div class="endpoint">
+                        <span class="method delete">DELETE</span>
+                        <code>/api/v1/users/{id}</code>
+                        <span class="endpoint-description">Delete a user</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- USERS -->
+            <section class="doc-section" id="users">
+                <div class="section-label">06 — RESOURCES</div>
+                <h2>Users Resource</h2>
+
+                <p>
+                    The Users resource provides a structured way to
+                    represent user information returned by an API.
+                </p>
+
+                <div class="code-window">
+                    <div class="code-header">
+                        <span>Example JSON response</span>
+                        <span class="language-tag">JSON</span>
+                    </div>
+                    <pre><code>{
+  "status": "success",
+  "data": {
+    "id": 101,
+    "name": "Alex Morgan",
+    "email": "alex@example.com",
+    "role": "developer"
+  }
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- REQUESTS -->
+            <section class="doc-section" id="requests">
+                <div class="section-label">07 — REQUESTS</div>
+                <h2>API Requests</h2>
+                <p>
+                    API requests communicate with a server using
+                    standard HTTP methods such as GET, POST, PUT,
+                    PATCH, and DELETE.
+                </p>
+            </section>
+
+            <!-- RESPONSES -->
+            <section class="doc-section" id="responses">
+                <div class="section-label">08 — RESPONSES</div>
+                <h2>API Responses</h2>
+                <p>
+                    A response contains the result of a request,
+                    including a status code, response headers,
+                    and optional JSON data.
+                </p>
+            </section>
+
+            <!-- ERRORS -->
+            <section class="doc-section" id="errors">
+                <div class="section-label">09 — ERROR HANDLING</div>
+                <h2>Error Handling</h2>
+                <div class="endpoint-list">
+                    <div class="endpoint">
+                        <span class="method error">400</span>
+                        <code>Bad Request</code>
+                        <span class="endpoint-description">Invalid request parameters</span>
+                    </div>
+                    <div class="endpoint">
+                        <span class="method error">401</span>
+                        <code>Unauthorised</code>
+                        <span class="endpoint-description">Authentication required</span>
+                    </div>
+                    <div class="endpoint">
+                        <span class="method error">404</span>
+                        <code>Not Found</code>
+                        <span class="endpoint-description">Resource does not exist</span>
+                    </div>
+                    <div class="endpoint">
+                        <span class="method error">500</span>
+                        <code>Server Error</code>
+                        <span class="endpoint-description">Unexpected server failure</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECURITY -->
+            <section class="doc-section" id="security">
+                <div class="section-label">10 — SECURITY</div>
+                <h2>Security Guidelines</h2>
+                <ul class="feature-list">
+                    <li>Use HTTPS for all API communication.</li>
+                    <li>Store credentials in secure environment variables.</li>
+                    <li>Validate all incoming data.</li>
+                    <li>Apply authentication and authorisation controls.</li>
+                    <li>Never commit sensitive keys to GitHub.</li>
+                </ul>
+            </section>
+
+            <!-- BEST PRACTICES -->
+            <section class="doc-section" id="best-practices">
+                <div class="section-label">11 — DEVELOPMENT</div>
+                <h2>Best Practices</h2>
+                <p>
+                    Write maintainable applications by using consistent
+                    naming conventions, reusable components, meaningful
+                    documentation and accessible user interfaces.
+                </p>
+            </section>
+
+            <!-- RESOURCES -->
+            <section class="doc-section" id="resources">
+                <div class="section-label">12 — LEARN MORE</div>
+                <h2>Developer Resources</h2>
+
+                <div class="resource-grid">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                       target="_blank" rel="noopener noreferrer" class="resource-card">
+                        <span>01</span>
+                        <h3>HTML Documentation</h3>
+                        <p>Learn semantic HTML and modern web structure.</p>
+                        <b>Explore ↗</b>
+                    </a>
+
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                       target="_blank" rel="noopener noreferrer" class="resource-card">
+                        <span>02</span>
+                        <h3>CSS Documentation</h3>
+                        <p>Explore layouts, animations and responsive styling.</p>
+                        <b>Explore ↗</b>
+                    </a>
+
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP"
+                       target="_blank" rel="noopener noreferrer" class="resource-card">
+                        <span>03</span>
+                        <h3>HTTP Reference</h3>
+                        <p>Understand HTTP requests, methods and responses.</p>
+                        <b>Explore ↗</b>
+                    </a>
+                </div>
+            </section>
+
+            <!-- BOTTOM NAVIGATION -->
+            <div class="bottom-navigation">
+                <a href="#getting-started">
+                    <span>← Previous</span>
+                    <strong>Overview</strong>
+                </a>
+
+                <a href="#installation" class="next-page">
+                    <span>Next →</span>
+                    <strong>Installation</strong>
+                </a>
+            </div>
+
+            <footer class="footer">
+                <a href="#home" class="footer-brand">zenith.docs</a>
+                <p>Built for developers. Designed for clarity.</p>
+                <span>© 2026 Zenith Documentation Hub</span>
+            </footer>
+
+        </main>
+
+        <!-- RIGHT TABLE OF CONTENTS -->
+        <aside class="toc">
+            <h3>ON THIS PAGE</h3>
+
+            <a href="#getting-started">Overview</a>
+            <a href="#introduction">Introduction</a>
+            <a href="#installation">Installation</a>
+            <a href="#authentication">Authentication</a>
+            <a href="#examples">Code Examples</a>
+            <a href="#api-reference">API Endpoints</a>
+            <a href="#users">Users Resource</a>
+            <a href="#requests">Requests</a>
+            <a href="#responses">Responses</a>
+            <a href="#errors">Error Handling</a>
+            <a href="#security">Security</a>
+            <a href="#best-practices">Best Practices</a>
+            <a href="#resources">Resources</a>
+
+            <div class="toc-note">
+                <strong>Pro tip</strong>
+                <p>Use the navigation links to jump directly to any documentation section.</p>
+            </div>
+        </aside>
+
+    </div>
+
+</body>
+</html>
